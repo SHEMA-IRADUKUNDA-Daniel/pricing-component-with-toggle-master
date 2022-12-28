@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(images/bg-bottom.svg),url(images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 100%, 100% 0%;
+    background-color: hsl(240, 78%, 98%);
+    font-size: 15px;
+    font-family: Montserrat;
+}
+
+.container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    font-weight: 700;
+}
+
+.head{
+    color: hsl(233, 13%, 49%);
+    font-weight: 700;
+    font-size: 30px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.secondHeader{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    margin: 10px;
+    padding: 0px;
+}
+
+.secondHeader p{
+    color: hsl(234, 14%, 74%);
+    font-weight: bold;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    left: 15px;
+}
+.switch:hover{
+    opacity: 0.6;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 1px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: 4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: hsl(237, 63%, 64%);
+}
+
+input:checked+.slider::before {
+    -webkit-transition: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+.slider {
+    border-radius: 10px;
+}
+
+.innerContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 2rem auto;
+}
+.box{
+    width: 300px;
+    padding: 20px;
+    line-height: 4em;
+    text-align: center;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
+.box1{
+    background-color: white;
+    border-radius: 10px;
+    color: hsl(232, 13%, 33%);
+}
+.box2{
+    background:linear-gradient(hsl(236, 72%, 79%),  hsl(237, 63%, 64%));
+    color: white;
+    border-radius: 10px;
+    padding: 3rem 1.5rem;
+}
+
+.box3 {
+    background-color: white;
+    border-radius: 10px ;
+    color: hsl(232, 13%, 33%);
+
+}
+.btn1, .btn3{
+    background:linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    font-weight: bold;
+}
+
+.btn1:hover,
+.btn3:hover{
+    border: 1px solid hsl(237, 63%, 64%);
+    background: white;
+    color:hsl(237, 63%, 64%) ;
+}
+.btn2{
+    color: hsl(237, 63%, 64%);
+}
+
+.btn2:hover{
+    border: 1px solid white;
+    background:none;
+    color: white;
+}
+
+h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+hr{
+    opacity: 40%;
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        
+        background-position: 0% 100%, 150% 0%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+    }
+
+    .innerContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 5px;
+    }
+    .secondHeader{
+        padding: 20px;
+    }
+
+}
